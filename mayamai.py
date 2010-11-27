@@ -319,6 +319,6 @@ bar.finish()
 
 print(boards)
 if (len(boards) == 1):
-    print("\n1 board".format(len(boards)))
+    print("\n1 board")
 else:
     print("\n{} boards".format(len(boards)))
