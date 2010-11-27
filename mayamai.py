@@ -29,11 +29,15 @@ class Solved(ProgressBarWidget):
     def update(self, progressbar):
         return '{}'.format(len(boards))
 
+class MyProgressBar(ProgressBar):
+    def _need_update(self):
+        return True
+
 maxprogress = 1000000
-bar = ProgressBar(widgets = ['Analysis: ', Percentage(), ' ',
-                             Bar(left = '[', right = ']'),
-                             ' Solved: ', Solved(),
-                             '  ', ETA()],
+bar = MyProgressBar(widgets = ['Analysis: ', Percentage(), ' ',
+                               Bar(left = '[', right = ']'),
+                               ' Solved: ', Solved(),
+                               '  ', ETA()],
                   maxval = maxprogress)
 totalprogress = 0
 
