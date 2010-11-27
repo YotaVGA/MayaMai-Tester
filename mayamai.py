@@ -318,4 +318,7 @@ for b in setup(pieceorder, board, maxprogress):
 bar.finish()
 
 print(boards)
-print("\n{} boards".format(len(boards)))
+if (len(boards) == 1):
+    print("\n1 board".format(len(boards)))
+else:
+    print("\n{} boards".format(len(boards)))
